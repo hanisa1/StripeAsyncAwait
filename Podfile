@@ -8,5 +8,7 @@ target 'StripeAsyncAwait' do
   # Pods for StripeAsyncAwait
 	pod 'FirebaseAuth'
 	pod 'FirebaseFirestore'
+  pod 'FirebaseFunctions'
+  pod 'StripePaymentSheet'
 
 end

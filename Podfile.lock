@@ -1233,6 +1233,15 @@ PODS:
     - gRPC-Core (~> 1.69.0)
     - leveldb-library (~> 1.22)
     - nanopb (~> 3.30910.0)
+  - FirebaseFunctions (11.9.0):
+    - FirebaseAppCheckInterop (~> 11.0)
+    - FirebaseAuthInterop (~> 11.0)
+    - FirebaseCore (~> 11.9.0)
+    - FirebaseCoreExtension (~> 11.9.0)
+    - FirebaseMessagingInterop (~> 11.0)
+    - FirebaseSharedSwift (~> 11.0)
+    - GTMSessionFetcher/Core (< 5.0, >= 3.4)
+  - FirebaseMessagingInterop (11.9.0)
   - FirebaseSharedSwift (11.9.0)
   - GoogleUtilities/AppDelegateSwizzler (8.0.2):
     - GoogleUtilities/Environment
@@ -1355,10 +1364,31 @@ PODS:
   - nanopb/decode (3.30910.0)
   - nanopb/encode (3.30910.0)
   - RecaptchaInterop (101.0.0)
+  - StripeApplePay (24.7.0):
+    - StripeCore (= 24.7.0)
+  - StripeCore (24.7.0)
+  - StripePayments (24.7.0):
+    - StripeCore (= 24.7.0)
+    - StripePayments/Stripe3DS2 (= 24.7.0)
+  - StripePayments/Stripe3DS2 (24.7.0):
+    - StripeCore (= 24.7.0)
+  - StripePaymentSheet (24.7.0):
+    - StripeApplePay (= 24.7.0)
+    - StripeCore (= 24.7.0)
+    - StripePayments (= 24.7.0)
+    - StripePaymentsUI (= 24.7.0)
+  - StripePaymentsUI (24.7.0):
+    - StripeCore (= 24.7.0)
+    - StripePayments (= 24.7.0)
+    - StripeUICore (= 24.7.0)
+  - StripeUICore (24.7.0):
+    - StripeCore (= 24.7.0)
 
 DEPENDENCIES:
   - FirebaseAuth
   - FirebaseFirestore
+  - FirebaseFunctions
+  - StripePaymentSheet
 
 SPEC REPOS:
   trunk:
@@ -1372,6 +1402,8 @@ SPEC REPOS:
     - FirebaseCoreInternal
     - FirebaseFirestore
     - FirebaseFirestoreInternal
+    - FirebaseFunctions
+    - FirebaseMessagingInterop
     - FirebaseSharedSwift
     - GoogleUtilities
     - "gRPC-C++"
@@ -1380,6 +1412,12 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - RecaptchaInterop
+    - StripeApplePay
+    - StripeCore
+    - StripePayments
+    - StripePaymentSheet
+    - StripePaymentsUI
+    - StripeUICore
 
 SPEC CHECKSUMS:
   abseil: a05cc83bf02079535e17169a73c5be5ba47f714b
@@ -1392,6 +1430,8 @@ SPEC CHECKSUMS:
   FirebaseCoreInternal: 154779013b85b4b290fdba38414df475f42e3096
   FirebaseFirestore: b6d8e413b6e3ebc5e2d0beac2371c6aefb740ef3
   FirebaseFirestoreInternal: 259eb0771fdf24d03d86d8f9692dda6df75cac28
+  FirebaseFunctions: f5aaaaaa167ddda9bc1e5b88ac03eb1c7eb9ed6d
+  FirebaseMessagingInterop: ced922294784e3f7cce3b5bcbd6c55a54a94d737
   FirebaseSharedSwift: 574e6a5602afe4397a55c8d4f767382d620285de
   GoogleUtilities: 26a3abef001b6533cf678d3eb38fd3f614b7872d
   "gRPC-C++": cc207623316fb041a7a3e774c252cf68a058b9e8
@@ -1400,7 +1440,13 @@ SPEC CHECKSUMS:
   leveldb-library: cc8b8f8e013647a295ad3f8cd2ddf49a6f19be19
   nanopb: fad817b59e0457d11a5dfbde799381cd727c1275
   RecaptchaInterop: 11e0b637842dfb48308d242afc3f448062325aba
+  StripeApplePay: 3c1b43d9b5130f6b714863bf8c9482c24168ab27
+  StripeCore: 4955c2af14446db04818ad043d19d8f97b73c5fa
+  StripePayments: 91820845bece6117809bcfdcaef39c84c2b4cae5
+  StripePaymentSheet: 1810187cbdbc73410b8fb86cecafaaa41c1481fc
+  StripePaymentsUI: 326376e23caa369d1f58041bdb858c89c2b17ed4
+  StripeUICore: 17a4f3adb81ae05ab885e1b353022a430176eab1
 
-PODFILE CHECKSUM: fa3e0eb6f591c5054c42e5543a496a934b89a601
+PODFILE CHECKSUM: 37d1067b9a7466c859b2064599eb9e01174303be
 
 COCOAPODS: 1.16.2
